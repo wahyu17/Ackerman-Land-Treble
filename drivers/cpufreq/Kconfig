@@ -129,6 +129,19 @@ config CPU_FREQ_DEFAULT_GOV_SCHED
 	  Use the CPUfreq governor 'sched' as default. This scales
 	  cpu frequency using CPU utilization estimates from the
 	  scheduler.
+<<<<<<< HEAD
+=======
+
+config CPU_FREQ_DEFAULT_GOV_CAFACTIVE
+	bool "cafactive"
+	select CPU_FREQ_GOV_CAFACTIVE
+	help
+	  Use the CPUFreq governor 'cafactive' as default. This allows
+	  you to get a full dynamic cpu frequency capable system by simply
+	  loading your cpufreq low-level hardware driver, using the
+	  'cafactive' governor for latency-sensitive workloads.
+
+>>>>>>> 0219d8bb8ae7... cpufreq: Add Cafactive governor
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -249,6 +262,17 @@ config CPUFREQ_DT
 	  This adds a generic DT based cpufreq driver for frequency management.
 	  It supports both uniprocessor (UP) and symmetric multiprocessor (SMP)
 	  systems which share clock and voltage across all CPUs.
+
+	  If in doubt, say N.
+
+config CPU_FREQ_GOV_CAFACTIVE
+	tristate "'cafactive' cpufreq policy governor"
+	help
+	  'cafactive' - CodeAurora(Qualcomm) version of interactive
+	  cpufreq policy governor.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called cpufreq_cafactive.
 
 	  If in doubt, say N.
 
