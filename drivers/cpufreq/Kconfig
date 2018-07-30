@@ -129,8 +129,7 @@ config CPU_FREQ_DEFAULT_GOV_SCHED
 	  Use the CPUfreq governor 'sched' as default. This scales
 	  cpu frequency using CPU utilization estimates from the
 	  scheduler.
-<<<<<<< HEAD
-=======
+
 
 config CPU_FREQ_DEFAULT_GOV_CAFACTIVE
 	bool "cafactive"
@@ -140,8 +139,6 @@ config CPU_FREQ_DEFAULT_GOV_CAFACTIVE
 	  you to get a full dynamic cpu frequency capable system by simply
 	  loading your cpufreq low-level hardware driver, using the
 	  'cafactive' governor for latency-sensitive workloads.
-
->>>>>>> 0219d8bb8ae7... cpufreq: Add Cafactive governor
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
