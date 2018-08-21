@@ -7,4 +7,4 @@
 #define EXPORT_UNUSED_SYMBOL(sym)
 #define EXPORT_UNUSED_SYMBOL_GPL(sym)
 
-#endif
+#endif /* _TOOLS_LINUX_EXPORT_H_ */

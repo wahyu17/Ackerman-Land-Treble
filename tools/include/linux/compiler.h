@@ -1,6 +1,5 @@
 #ifndef _TOOLS_LINUX_COMPILER_H_
 #define _TOOLS_LINUX_COMPILER_H_
-
 #ifndef __always_inline
 # define __always_inline	inline __attribute__((always_inline))
 #endif
@@ -37,4 +36,4 @@
 
 #define ACCESS_ONCE(x) (*(volatile typeof(x) *)&(x))
 
-#endif /* _TOOLS_LINUX_COMPILER_H */
+#endif /* _TOOLS_LINUX_COMPILER_H_ */
