@@ -1977,7 +1977,6 @@ in_rq_range(struct usb_function *fn, const struct usb_ctrlrequest *cr)
 
 	pr_debug("%s: entity_id:%u\n", __func__, entity_id);
 	if (control_selector == UAC2_CS_CONTROL_SAM_FREQ) {
-<<<<<<< HEAD
 		if (entity_id == USB_IN_CLK_ID || entity_id == USB_OUT_CLK_ID) {
 			int i;
 
@@ -1992,7 +1991,6 @@ in_rq_range(struct usb_function *fn, const struct usb_ctrlrequest *cr)
 		} else
 			return -EOPNOTSUPP;
 
-=======
 		if (entity_id == USB_IN_CLK_ID)
 			r.dMIN = cpu_to_le32(p_srate);
 		else if (entity_id == USB_OUT_CLK_ID)
@@ -2006,7 +2004,6 @@ in_rq_range(struct usb_function *fn, const struct usb_ctrlrequest *cr)
 
 		value = min_t(unsigned, w_length, sizeof r);
 		memcpy(req->buf, &r, value);
->>>>>>> a08407f9e6b6abb3b236485bfe57c12428791966
 	} else {
 		dev_err(&uac2->pdev.dev,
 			"%s:%d control_selector=%d TODO!\n",
