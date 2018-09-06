@@ -1991,15 +1991,11 @@ in_rq_range(struct usb_function *fn, const struct usb_ctrlrequest *cr)
 		} else
 			return -EOPNOTSUPP;
 
-		if (entity_id == USB_IN_CLK_ID)
-			r.dMIN = cpu_to_le32(p_srate);
-		else if (entity_id == USB_OUT_CLK_ID)
-			r.dMIN = cpu_to_le32(c_srate);
+		if (entity_id == USB_IN_CLK_ID);
+		else if (entity_id == USB_OUT_CLK_ID);
 		else
 			return -EOPNOTSUPP;
 
-		r.dMAX = r.dMIN;
-		r.dRES = 0;
 		r.wNumSubRanges = cpu_to_le16(1);
 
 		value = min_t(unsigned, w_length, sizeof r);
