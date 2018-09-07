@@ -118,8 +118,8 @@ static void __init zone_sizes_init(unsigned long min, unsigned long max)
 
 int pfn_valid(unsigned long pfn)
 {
-	return (pfn & PFN_MASK) == pfn && memblock_is_memory(pfn << PAGE_SHIFT);
 	phys_addr_t addr = pfn << PAGE_SHIFT;
+	return (pfn & PFN_MASK) == pfn && memblock_is_memory(pfn << PAGE_SHIFT);
 
 	if ((addr >> PAGE_SHIFT) != pfn)
 		return 0;
