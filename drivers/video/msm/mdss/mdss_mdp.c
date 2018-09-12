@@ -782,7 +782,6 @@ void mdss_mdp_irq_clear(struct mdss_data_type *mdata,
 
 int mdss_mdp_irq_enable(u32 intr_type, u32 intf_num)
 {
-	int irq_idx;
 	int irq_idx = 0;
 	unsigned long irq_flags;
 	int ret = 0;
